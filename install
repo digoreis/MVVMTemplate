@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo Copying MVVM zip file to Xcode templates
+sudo cp MVVM.zip /Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File\ Templates/Source/
+echo unziping MVVM
+cd /Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File\ Templates/Source/
+sudo rm -R MVVM\ Base.xctemplate
+sudo unzip MVVM.zip
+echo removing zip file
+sudo rm MVVM.zip
+sudo rm -R __MACOSX
+echo Done!
+open /Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File\ Templates/Source/
